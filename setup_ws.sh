@@ -1,6 +1,9 @@
 # Create venv of c++
 mkdir cpp_venv
 
+# Create launch
+mkdir launch
+
 # Create venv of python
 python3 -m venv ./py_venv --system-site-packages
 
