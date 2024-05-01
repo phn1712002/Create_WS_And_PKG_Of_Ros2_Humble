@@ -13,10 +13,10 @@ Docker using : https://github.com/Tiryoh/docker-ros2-desktop-vnc
 Open termial 
 ```bash
     # Downloader folder
-    git clone https://github.com/phn1712002/create_ws_of_ros2.git
+    git clone https://github.com/phn1712002/Create_ws_and_pkg_of_ros2.git
     
     # Change [name_ws] to the desired name
-    mv create_ws_of_ros2 [name_ws]
+    mv Create_ws_and_pkg_of_ros2 [name_ws]
 
     # Setup workspace
     cd [name_ws]
