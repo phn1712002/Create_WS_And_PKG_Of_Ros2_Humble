@@ -46,7 +46,7 @@ case $yn in
 		break;;
 	[nN] ) echo "No remove .git";
 		exit;;
-	* ) echo invalid response;;
+	* ) echo "Invalid Response";;
 esac
 done
 # Echo Complete
