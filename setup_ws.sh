@@ -39,6 +39,7 @@ read -p "Remove .git? (y/n) " yn
 case $yn in 
 	[yY] ) echo "Remove .git";
 		rm -rf .git
+		rm -rf readme.md
 		break;;
 	[nN] ) echo "No remove .git";
 		exit;;

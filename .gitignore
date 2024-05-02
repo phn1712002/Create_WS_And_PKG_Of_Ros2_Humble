@@ -1,0 +1,10 @@
+build/*
+
+cpp_venv/*
+
+install/*
+
+log/*
+
+py_venv/*
+
