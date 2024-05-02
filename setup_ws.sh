@@ -11,6 +11,7 @@ python3 -m venv ./py_venv --system-site-packages
 rosdep install -i --from-path src --rosdistro humble -y
 
 # Build ws
+touch ./py_venv/COLCON_IGNORE
 colcon build
 
 # Get pwd
@@ -33,7 +34,16 @@ echo "########################" >> /root/.bashrc
 echo "" >> /root/.bashrc
 
 # Remove git
-rm -rf .git
-
+while true; do
+read -p "Remove .git? (y/n) " yn
+case $yn in 
+	[yY] ) echo "Remove .git";
+		rm -rf .git
+		break;;
+	[nN] ) echo "No remove .git";
+		exit;;
+	* ) echo invalid response;;
+esac
+done
 # Echo Complete
 echo "Complete !"
