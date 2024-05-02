@@ -1,3 +1,6 @@
+# Create src
+mkdir src
+
 # Create venv of c++
 mkdir cpp_venv
 
