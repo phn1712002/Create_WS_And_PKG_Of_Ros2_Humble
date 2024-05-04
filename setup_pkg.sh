@@ -1,3 +1,4 @@
+clear
 # Create package
 echo "Name of package?"
 read PKG_NAME
@@ -16,4 +17,5 @@ esac
 done
 
 # Echo Complete
+clear
 echo "Complete !"
