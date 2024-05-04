@@ -15,6 +15,7 @@ rosdep install -i --from-path src --rosdistro humble -y
 
 # Build ws
 touch ./py_venv/COLCON_IGNORE
+touch ./cpp_venv/COLCON_IGNORE
 colcon build
 
 # Get pwd
