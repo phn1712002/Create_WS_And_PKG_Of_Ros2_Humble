@@ -52,5 +52,6 @@ esac
 done
 # Echo Complete
 clear
-history -c 
 echo "Complete !"
+rm -f setup_ws.sh
+
