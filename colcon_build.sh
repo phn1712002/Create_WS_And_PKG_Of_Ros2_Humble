@@ -24,3 +24,5 @@ case "$SELECT" in
    colcon build --symlink-install	
    ;;
 esac
+
+source ./install/local_setup.bash
