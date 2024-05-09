@@ -6,7 +6,10 @@ sudo echo "" >> /root/.bashrc
 
 #System
 sudo apt update
-sudo apt install python-is-python3 nano jstest-gtk evtest -y
+sudo apt install python-is-python3 -y
+sudo apt install nano -y
+sudo apt install evtest -y
+sudo apt install jstest-gtk -y
 
 # Echo Complete
 clear
