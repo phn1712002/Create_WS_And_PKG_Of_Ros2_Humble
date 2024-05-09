@@ -6,11 +6,12 @@ sudo echo "" >> /root/.bashrc
 
 #System
 sudo apt update
-sudo apt install python-is-python3
-sudo apt install nano
-sudo apt install jstest-gtk
-sudo apt install evtest
-sudo apt install python3-venv 
+sudo apt install python-is-python3 nano jstest-gtk evtest -y
+
+# Echo Complete
+clear
+echo "Complete !"
+rm -f setup_env.sh
 
 #Camera
 sudo usermod -aG video $USER
@@ -28,9 +29,6 @@ newgrp dialout
 cat /proc/asound/cards
 sudo nano /usr/share/alsa/alsa.conf
 
-# Echo Complete
-clear
-echo "Complete !"
-rm -f setup_env.sh
+
 
 

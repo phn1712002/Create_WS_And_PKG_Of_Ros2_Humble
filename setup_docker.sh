@@ -3,7 +3,7 @@ echo "Port?"
 read PORT_VALUE
 
 # Start docker
-ENV_NAME = "$(basename $PWD)"
+ENV_NAME="$(basename $PWD)"
 docker run -it \
 	-p $PORT_VALUE:80 \
 	--security-opt seccomp=unconfined \

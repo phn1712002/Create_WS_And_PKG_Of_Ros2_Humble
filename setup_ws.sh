@@ -45,7 +45,7 @@ case $yn in
 		rm -rf readme.md
 		break;;
 	[nN] ) echo "No remove .git";
-		exit;;
+		break;;
 	* ) echo "Invalid Response";;
 esac
 done
@@ -54,3 +54,4 @@ done
 clear
 echo "Complete !"
 rm -f setup_ws.sh
+
