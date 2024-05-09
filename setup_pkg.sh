@@ -1,8 +1,8 @@
 clear
 # Create package
 echo "Name of package?"
-read PKG_NAME
-cd src
+read PKG_NAE
+cd srC
 while true; do
 read -p "C++ or Python, create package with C++ (y/n) ?" yn
 case $yn in 

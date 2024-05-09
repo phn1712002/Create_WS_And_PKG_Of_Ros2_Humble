@@ -18,7 +18,6 @@ colcon build
 
 # Get pwd
 DIR="$( cd "$( dirname "$0" )" && pwd )"
-
 # Echo /home/ubuntu/.bashrc in user ubuntu
 echo "" >> /home/ubuntu/.bashrc
 echo "#### THIS IS OF [$DIR]" >> /home/ubuntu/.bashrc
@@ -50,8 +49,8 @@ case $yn in
 	* ) echo "Invalid Response";;
 esac
 done
+
 # Echo Complete
 clear
 echo "Complete !"
 rm -f setup_ws.sh
-
