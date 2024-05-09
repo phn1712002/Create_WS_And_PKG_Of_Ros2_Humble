@@ -7,6 +7,9 @@ rm -rf log
 # Create src
 mkdir src
 
+# Create bag
+mkdir bag
+
 # Create launch
 mkdir launch
 
