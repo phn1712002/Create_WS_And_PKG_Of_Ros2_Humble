@@ -21,6 +21,8 @@ case "$SELECT" in
    colcon build --packages-select $NAME_PKG 
    ;;
    "4") 
+   echo "Name packages?"
+   read NAME_PKG
    colcon build --packages-skip $NAME_PKG	
    ;;
    "5") 
