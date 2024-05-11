@@ -1,5 +1,7 @@
 # Colcon build
 clear
+unset AMENT_PREFIX_PATH
+unset CMAKE_PREFIX_PATH
 echo "1. Colcon build"
 echo "2. Colcon build with remove build/install/log"
 echo "3. Colcon build with packages select"
