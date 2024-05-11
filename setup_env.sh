@@ -11,11 +11,6 @@ sudo apt install nano -y
 sudo apt install evtest -y
 sudo apt install jstest-gtk -y
 
-# Echo Complete
-clear
-echo "Complete !"
-rm -f setup_env.sh
-
 #Camera
 sudo usermod -aG video $USER
 newgrp video
@@ -31,6 +26,13 @@ newgrp dialout
 # Edit card
 cat /proc/asound/cards
 sudo nano /usr/share/alsa/alsa.conf
+
+# Echo Complete
+clear
+echo "Complete !"
+rm -f setup_env.sh
+
+
 
 
 
