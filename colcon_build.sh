@@ -1,7 +1,26 @@
 # Colcon build
 clear
-unset AMENT_PREFIX_PATH
-unset CMAKE_PREFIX_PATH
+while true; do
+read -p "Unset ?:" yn
+case $yn in 
+	[yY] )
+      unset AMENT_PREFIX_PATH
+      unset CMAKE_PREFIX_PATH
+      break;;
+	[nN] )
+		break;;
+	* ) echo "Invalid response";;
+esac
+done
+clear
+
+source ./install/local_setup.bash
+rosdep install --from src -i
+echo "===================================================="
+read
+clear
+
+# Colcon build
 echo "1. Colcon build"
 echo "2. Colcon build with remove build/install/log"
 echo "3. Colcon build with packages select"
@@ -34,3 +53,7 @@ case "$SELECT" in
 esac
 
 source ./install/local_setup.bash
+unset AMENT_PREFIX_PATH
+unset CMAKE_PREFIX_PATH
+
+
