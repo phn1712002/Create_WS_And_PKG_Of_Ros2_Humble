@@ -7,6 +7,7 @@ sudo echo "" >> /root/.bashrc
 #System
 sudo apt update
 sudo apt install python-is-python3 -y
+sudo apt install python3-venv -y
 sudo apt install nano -y
 sudo apt install evtest -y
 sudo apt install jstest-gtk -y
