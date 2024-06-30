@@ -39,5 +39,3 @@ ros2 run micro_ros_setup create_agent_ws.sh
 git config --global --add safe.directory /home/ubuntu/uROS2_ws/build/micro_ros_agent/agent/src/xrceagent
 ros2 run micro_ros_setup build_agent.sh
 source install/local_setup.bash 
-
-rm -rf setup_platformio.sh

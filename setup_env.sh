@@ -31,7 +31,6 @@ sudo nano /usr/share/alsa/alsa.conf
 # Echo Complete
 clear
 echo "Complete !"
-rm -f setup_env.sh
 
 
 

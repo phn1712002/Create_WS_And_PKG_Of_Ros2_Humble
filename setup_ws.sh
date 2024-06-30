@@ -56,5 +56,3 @@ done
 # Echo Complete
 clear
 echo "Complete !"
-rm -f setup_ws.sh
-

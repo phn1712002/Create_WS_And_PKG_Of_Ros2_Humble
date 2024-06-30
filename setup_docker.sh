@@ -13,6 +13,3 @@ docker run -it \
 	--privileged \
 	--name $ENV_NAME \
 	tiryoh/ros2-desktop-vnc:humble
-
-rm -f setup_docker.sh
-rm -f setup_docker_win.bat
