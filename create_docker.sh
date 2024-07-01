@@ -1,3 +1,4 @@
+clear
 # Inport Port
 echo "Port?"
 read PORT_VALUE

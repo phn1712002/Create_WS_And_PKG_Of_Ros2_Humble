@@ -4,14 +4,12 @@ rm -rf build
 rm -rf install
 rm -rf log
 
-# Create src
+# Create
 mkdir src
-
-# Create bag
 mkdir bag
-
-# Create launch
 mkdir launch
+mkdir firmware
+mkdir setup
 
 # Check ws
 rosdep install -i --from-path src --rosdistro humble -y
@@ -38,6 +36,27 @@ sudo echo "########################" >> /root/.bashrc
 sudo echo "" >> /root/.bashrc
 sudo echo "clear" >> /root/.bashrc
 
+# ROS Agent
+git clone -b $ROS_DISTRO https://github.com/micro-ROS/micro_ros_setup.git src/micro_ros_setup
+
+# Update dependencies using rosdep
+sudo apt update && rosdep update
+rosdep install --from-paths src --ignore-src -y
+
+# Build micro-ROS tools and source them
+colcon build
+source install/local_setup.bash
+
+# Download micro-ROS-Agent packages
+ros2 run micro_ros_setup create_agent_ws.sh
+
+# Build step
+git config --global --add safe.directory /home/ubuntu/uROS2_ws/build/micro_ros_agent/agent/src/xrceagent
+ros2 run micro_ros_setup build_agent.sh
+source install/local_setup.bash 
+
+# Install requirements.txt
+pip install -r setup/requirements.txt
 
 # Remove git
 while true; do

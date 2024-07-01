@@ -12,28 +12,21 @@ sudo apt install nano -y
 sudo apt install evtest -y
 sudo apt install jstest-gtk -y
 
-#Camera
-sudo usermod -aG video $USER
-newgrp video
+# Setting pio
+wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
+python3 get-platformio.py
+rm -rf get-platformio.py
 
-#Audio
-sudo usermod -aG audio $USER
-newgrp audio
+# Echo /home/ubuntu/.bashrc in user ubuntu
+echo "" >> /home/ubuntu/.bashrc
+echo "#### THIS IS OF PlatformIO" >> /home/ubuntu/.bashrc
+echo "export PATH=\$PATH:/root/.platformio/penv/bin" >> /home/ubuntu/.bashrc
+echo "########################" >> /home/ubuntu/.bashrc
+echo "" >> /home/ubuntu/.bashrc
 
-#DialOut
-sudo usermod -aG dialout $USER
-newgrp dialout
-
-# Edit card
-cat /proc/asound/cards
-sudo nano /usr/share/alsa/alsa.conf
-
-# Echo Complete
-clear
-echo "Complete !"
-
-
-
-
-
-
+# Echo /root/.bashrc in user ubuntu
+sudo echo "" >> /root/.bashrc
+sudo echo "#### THIS IS OF PlatformIO" >> /root/.bashrc
+sudo echo "export PATH=\$PATH:/root/.platformio/penv/bin" >> /root/.bashrc
+sudo echo "########################" >> /root/.bashrc
+sudo echo "" >> /root/.bashrc
