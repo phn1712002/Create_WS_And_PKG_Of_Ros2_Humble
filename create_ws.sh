@@ -5,11 +5,43 @@ rm -rf install
 rm -rf log
 
 # Create
+mkdir .backup
+touch ./.backup/.gitignore
+echo '*' > ./.backup/.gitignore
+touch ./.backup/COLCON_IGNORE
+
+mkdir build
+touch ./build/.gitignore
+echo '*' > ./build/.gitignore
+touch ./build/COLCON_IGNORE
+
+mkdir install
+touch ./install/.gitignore
+echo '*' > ./install/.gitignore
+touch ./install/COLCON_IGNORE
+
+mkdir log
+touch ./log/.gitignore
+echo '*' > ./log/.gitignore
+touch ./log/COLCON_IGNORE
+
+mkdir model
+touch ./model/.gitignore
+echo '*' > ./model/.gitignore
+touch ./model/COLCON_IGNORE
+
 mkdir src
-mkdir bag
+touch ./src/.gitkeep
+
 mkdir launch
+touch ./launch/.gitkeep
+
 mkdir firmware
+touch ./firmware/.gitkeep
+
 mkdir setup
+touch ./setup/setup_py_env.sh
+echo '#pip install -r ./setup/[name-file].txt' > ./setup/setup_py_env.sh
 
 # Check ws
 rosdep install -i --from-path src --rosdistro humble -y

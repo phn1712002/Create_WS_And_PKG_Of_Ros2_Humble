@@ -20,6 +20,10 @@ echo "===================================================="
 read
 clear
 
+# Install package python
+bash ./setup/setup_py_env.sh
+clear
+
 # Colcon build
 echo "1. Colcon build"
 echo "2. Colcon build with remove build/install/log"
@@ -34,6 +38,21 @@ case "$SELECT" in
    ;;
    "2") 
    rm -rf build install log
+   mkdir build
+   touch ./build/.gitignore
+   echo '*' > ./build/.gitignore
+   touch ./build/COLCON_IGNORE
+
+   mkdir install
+   touch ./install/.gitignore
+   echo '*' > ./install/.gitignore
+   touch ./install/COLCON_IGNORE
+
+   mkdir log
+   touch ./log/.gitignore
+   echo '*' > ./log/.gitignore
+   touch ./log/COLCON_IGNORE
+   
    colcon build	
    ;;
    "3")
