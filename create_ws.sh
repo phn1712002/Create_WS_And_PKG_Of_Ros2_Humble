@@ -13,17 +13,14 @@ touch ./.backup/COLCON_IGNORE
 mkdir build
 touch ./build/.gitignore
 echo '*' > ./build/.gitignore
-touch ./build/COLCON_IGNORE
 
 mkdir install
 touch ./install/.gitignore
 echo '*' > ./install/.gitignore
-touch ./install/COLCON_IGNORE
 
 mkdir log
 touch ./log/.gitignore
 echo '*' > ./log/.gitignore
-touch ./log/COLCON_IGNORE
 
 mkdir model
 touch ./model/.gitignore
