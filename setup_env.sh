@@ -12,9 +12,6 @@ sudo apt install nano -y
 sudo apt install evtest -y
 sudo apt install jstest-gtk -y
 
-#Install vscode
-curl -fsSL https://code-server.dev/install.sh | sh
-
 # Setting pio
 wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
 python3 get-platformio.py
